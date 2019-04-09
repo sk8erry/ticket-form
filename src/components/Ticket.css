@@ -2,15 +2,12 @@
   box-sizing: border-box;
 }
 
-.ticket-component-title {
-  background-color: blanchedalmond;
-}
-
 .ticket-wrapper {
-  width: 600px;
+  width: 400px;
   height: 100px;
   display: flex;
   position: relative;
+  padding-left: 10px;
 }
 
 .ticket-info {

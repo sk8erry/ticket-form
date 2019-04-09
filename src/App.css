@@ -2,24 +2,31 @@
   box-sizing: border-box;
 }
 
-.ticket-component-title {
+.ticket-component-title,
+.customer-info-title {
   display: flex;
   align-items: center;
+  background-color: #e5e7e9;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.subtotal-filler {
+  width: 100%;
+  height: 10px;
   background-color: #e5e7e9;
   height: 50px;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
+  width: 400px;
+  position: relative;
+  top:30px;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
-.tickets-wrapper {
-  padding: 20px;
-}
-
-.tickets-wrapper .ticket-wrapper {
-  border-bottom: 1px solid black;
+.tickets-wrapper 
+.ticket-wrapper {
+  border-bottom: 1px solid #e5e7e9;
 }

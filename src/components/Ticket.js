@@ -15,7 +15,6 @@ class Ticket extends React.Component {
   render() {
     const ticketInfo = this.props.ticketInfo
     const cart = this.props.cart
-    let ticketCount = 0
     return (
       <React.Fragment>
         <div className="ticket-wrapper">

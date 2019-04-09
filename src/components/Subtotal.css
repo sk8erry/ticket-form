@@ -1,0 +1,28 @@
+.filler {
+  width: 400px;
+  height: 30px;
+  background-color: #e5e7e9;
+}
+
+.subtotal-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn.pay {
+  background-color: #3498db;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.total-tickets {
+  margin-left: 10px;
+}
+
+.sum {
+  margin-left: 10px;
+}
