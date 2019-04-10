@@ -14,8 +14,7 @@ class App extends Component {
   state = {
     cart: [],
     userPhone: '',
-    userEmail: '',
-    sponsors: []
+    userEmail: ''
   }
 
   //Add one ticket (id) to cart
@@ -72,7 +71,29 @@ class App extends Component {
   }
 
   handleSubmit = () => {
-    
+    let postData = this.state
+    let cartCount = postData.cart.reduce((accl, item) => accl + item, 0)
+    if (cartCount === 0) {
+      window.alert("购物车不能为空")
+      return
+    } else if ( !postData.userPhone || !postData.userEmail ) {
+      window.alert("请填写手机号和电子邮件")
+      return
+    } else {
+      this.postToServer(postData)
+    }
+  }
+
+  postToServer = (postData) => {
+    postData = JSON.stringify(postData)
+    fetch('some_api', {
+      method: 'post',
+      body: postData
+    }).then(response => {
+      return response.text
+    }).catch(err => {
+      console.error(err)
+    })
   }
 
   render() {

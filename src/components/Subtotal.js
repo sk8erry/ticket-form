@@ -26,7 +26,7 @@ class Subtotal extends React.Component {
             <div className="sum">合计{this.getSum(cart, ticketsInfo)}元</div>
           </div>
           <div className="pay">
-            <button className="btn pay">
+            <button className="btn pay" onClick={this.props.onSubmit}>
               立即支付
             </button>
           </div>
